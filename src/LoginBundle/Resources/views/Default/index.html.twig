@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="http://www.fundaciondelasfamilias.cl/wp-content/uploads/2015/10/favicon.png">
+    <title>Fundación de Las Familias – Presidencia de la República</title>
+    <link href="{{asset('bundles/framework/vendors/bootstrap/dist/css/bootstrap.min.css')}}" rel="stylesheet">
+    <link href="{{asset('bundles/framework/vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css')}}" rel="stylesheet">
+    <link href="{{asset('bundles/framework/vendors/datatables.net-bs/css/dataTables.bootstrap.min.css')}}" rel="stylesheet">
+    <link href="{{asset('bundles/framework/vendors/font-awesome/css/font-awesome.min.css')}}" rel="stylesheet">
+    <link href="{{asset('bundles/framework/build/css/custom.css')}}" rel="stylesheet">
+    <link href="{{asset('bundles/framework/vendors/select2/dist/css/select2.min.css')}}" rel="stylesheet">
+  </head>
+  <body class="nav-md">
+    <div class="container body">
+     <div class="main_container">
+     <div class="col-md-3 left_col menu_fixed">
+      <div class="left_col scroll-view">
+      <div class="clearfix">
+      <!-- menu profile quick info -->
+          <img src="{{asset('bundles/framework/images/logo.jpg')}}" alt="..." class="img-responsive col-md-12">
+      <!-- /menu profile quick info -->
+      </div>
+    <!-- sidebar menu -->
+    <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+      <div class="menu_section">
+        <ul class="nav side-menu">
+          <li>
+          <a>
+            <i class="fa fa-pencil"></i>
+            Mantenedores
+            <span class="fa fa-chevron-down"></span>
+          </a>
+          <ul class="nav child_menu">
+          <li>
+              <a href="mantenedordeusuarios.html">
+                <i class="fa fa-users"></i>
+                Usuarios
+              </a>
+            </li>
+            <li>
+              <a href="mantenedorcentrosdecosto.html">
+                <i class="fa fa-users"></i>
+                Centros De Costo
+              </a>
+            </li>
+            <li>
+              <a href="mantenedordeproveedores.html">
+                <i class="fa fa-users"></i>
+                Proveedores
+              </a>
+            </li>
+            <li>
+              <a href="mantenedortiposdegasto.html">
+                <i class="fa fa-users"></i>
+                Tipos de gasto
+              </a>
+            </li>
+          </ul>
+        </li>
+              <li><a href="verificacionrendiciones.html"><i class="fa fa-sign-out"></i> Rendiciones</a>
+              </li> 
+                          <li><a href="#"><i class="fa fa-sign-out"></i> Cerrar Sesión</a>
+                          </li>                 
+                        </ul>
+                      </div>
+                    </div>
+                    <!-- /sidebar menu -->
+                  </div>
+        </div>
+
+        <!-- top navigation -->
+        <div class="top_nav">
+          <div class="nav_menu">
+            <nav class="" role="navigation">
+              <div class="nav toggle">
+                <a id="menu_toggle"><i class="fa fa-bars"></i></a>
+              </div>
+                <ul class="nav navbar-nav navbar-right">
+                  <li>
+                    <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                        {% block header %}
+                        {% endblock %}
+                       <img src="{{asset('bundles/framework/images/logo.jpg')}}" alt="..." >
+                      <span class=" fa fa-angle-down"></span>
+                    </a>
+                    <ul class="dropdown-menu dropdown-usermenu pull-right">
+                      <li><a href="<?=site_url();?>/operator/misdatos"><i class="fa fa-user-circle"></i>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mis Datos</a></li>
+                      <li><a href="<?=site_url();?>/index/logout"><i class="fa fa-sign-out"></i>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Cerrar Sesión</a></li>
+                    </ul>
+                  </li>
+                </ul>
+            </nav>
+          </div>
+        </div>
+        <!-- /top navigation -->
+        <!-- page content -->
+        <div class="right_col" role="main">
+          <div class="">
+          <div class="page-title">
+              <div class="title_left">
+                <h3>Rendiciones</h3>
+                <br>
+              </div>
+            </div>
+            <div class="clearfix"></div>
+            <div class="row">
+              <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="x_panel">
+                  <a href="#">
+                  <div class="x_title collapse-link">
+                    <h2>PROGRAMA DE DESARROLLO FAMILIAR</h2>
+                    <ul class="nav navbar-right panel_toolbox">
+                      <li class="pull-right"><i class="fa fa-chevron-up"></i></li>
+                    </ul>
+                    <div class="clearfix"></div>
+                  </div>
+                  </a>
+                  <div class="x_content" style="display : none">
+                    <div class="col-md-12 col-xs-4" role="tabpanel" data-example-id="togglable-tabs">
+                      <ul class="nav nav-tabs bar_tabs" role="tablist">
+                        <li class="active">
+                          <a href="#4201" data-toggle="tab">Desarrollo Ciudadano</a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="col-md-12">
+                      <!-- Tab panes -->
+                      <div class="tab-content">
+                        <div class="tab-pane active" id="4201">
+                          <div class="accordion" id="accordion" role="tablist" aria-multiselectable="true">
+                            <div class="panel">
+                              <a class="panel-heading" role="tab" id="heading01" data-toggle="collapse" data-parent="#accordion" href="#collapse1" aria-expanded="true" aria-controls="1">
+                                <h4 class="panel-title">4201-01 Talleres Deportivos Recreativos</h4>
+                              </a>
+                              <div id="collapse1" class="panel-collapse collapse " role="tabpanel" aria-labelledby="heading01">
+                                <div class="panel-body">
+                                  <table class="table table-bordered table-hover">
+                                    <thead>
+                                      <tr>
+                                        <th>Cuenta</th>
+                                        <th>Descripcion</th>
+                                        <th>Monto<br>Solicitado</th>
+                                        <th>Rendido<br>1°quincena</th>
+                                        <th>Reintegro<br>Impuestos</th>
+                                        <th>Devolucion<br>Excedentes</th>
+                                        <th>Saldo<br>Fondos por rendir</th>
+                                        <th>Acciones</th>
+                                        <th>Estado</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                        <td>4201-01-0001</td>
+                                        <td>Honorarios</td>
+                                        <td id="mnt_4202020001">$0</td>
+                                        <td>$0</td>
+                                        <td>$0</td>
+                                        <td>$0</td>
+                                        <td>$0</td>
+                                        <td><a href="editrendicion.html" class="btn btn-xs btn-info text-center"><i class="fa fa-eye"></i></a></td>
+                                        <td>
+                                            <div class="progress">
+                                                <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:100%"></div>
+                                            </div>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td>4201-01-0002</td>
+                                        <td>Materiales y Equipamiento</td>
+                                        <td>$0</td>
+                                        <td>$0</td>
+                                        <td>$0</td>
+                                        <td>$0</td>
+                                        <td>$0</td>
+                                        <td>
+                                          <button class="btn btn-xs btn-success text-center new_rnd"><i class="fa fa-plus"></i></button>
+                                          <a href="editrendicion.html" class="btn btn-xs btn-info text-center"><i class="fa fa-eye"></i></a>
+                                        </td>
+                                        <td>
+                                            <div class="progress">
+                                                <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:0%"></div>
+                                            </div>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td>4201-01-0003</td>
+                                        <td>Movilización</td>
+                                        <td>$0</td>
+                                        <td>$0</td>
+                                        <td>$0</td>
+                                        <td>$0</td>
+                                        <td>$0</td>
+                                        <td></td>
+                                        <td>
+                                            <div class="progress">
+                                                <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:100%"></div>
+                                            </div>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td>4201-01-0004</td>
+                                        <td>Alimentación</td>
+                                        <td>$0</td>
+                                        <td>$0</td>
+                                        <td>$0</td>
+                                        <td>$0</td>
+                                        <td>$0</td>
+                                        <td></td>
+                                        <td>
+                                            <div class="progress">
+                                                <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:100%"></div>
+                                            </div>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td>4201-01-0005</td>
+                                        <td>Otros</td>
+                                        <td>$0</td>
+                                        <td>$0</td>
+                                        <td>$0</td>
+                                        <td>$0</td>
+                                        <td>$0</td>
+                                        <td></td>
+                                        <td>
+                                            <div class="progress">
+                                                <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:100%"></div>
+                                            </div>
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </div>
+                              </div>
+                            </div>     
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="clearfix"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Modal -->
+        <div id="new_doc" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span>
+                          </button>
+                          <h4 class="modal-title">Nuevo Documento</h4>
+                        </div>
+                        <div class="modal-body">
+                          <form id="formDoc" data-parsley-validate method="POST" action="">
+                          <div class="col-lg-12">
+                            <div class="col-md-6">
+                              <label for="doc_tipo">Tipo de documento:</label>
+                                <select id="doc_tipo" name="doc_tipo" class="form-control" required>
+                                  <option value=""></option>
+                                  <option value="">Boleta</option>
+                                  <option value="">Factura</option>
+                                  <option value="">Liquidación</option>
+                                  <option value="">Otro</option>
+                                </select>
+                            </div>
+                            <div class="col-lg-6">
+                            <label for="doc_prov">Proveedor:</label>
+                            <div class="input-group">
+                              <select id="doc_prov" name="doc_prov" class="form-control" required>
+                                  <option value=""></option>
+                                  <option value="">Proveedor 1</option>
+                                  <option value="">Proveedor 2</option>
+                                  <option value="">Proveedor 3</option>
+                                  <option value="">Proveedor 4</option>
+                                  <option value="">Proveedor 5</option>
+                                </select>
+                              <span class="input-group-btn">
+                                <button type="button" class="btn btn-primary" id="newProv"><i class="fa fa-plus"></i></button>
+                              </span>
+                            </div>                                
+                            </div>
+                            <div class="col-lg-6">
+                              <label for="doc_mnt">Monto:</label>
+                            <input type="number" id="doc_mnt" class="form-control" name="doc_mnt" required />
+                            </div>
+                            <div class="col-lg-6">
+                              <label for="doc_ndoc">N° de documento:</label>
+                            <input type="number" id="doc_ndoc" class="form-control" name="doc_ndoc" required />
+                            </div>
+                            <div class="col-lg-6">
+                              <label for="doc_fecha">Fecha de documento:</label>
+                            <input type="text" id="doc_fecha" class="form-control" name="doc_fecha" required />
+                            </div>
+                            <div class="col-lg-6">
+                              <label for="doc_forma">Forma de pago:</label>
+                                <select id="doc_forma" name="doc_forma" class="form-control" required>
+                                  <option value=""></option>
+                                  <option value="">Efectivo</option>
+                                  <option value="">Cheque</option>
+                                  <option value="">Transferencia</option>
+                                </select>
+                            </div>
+                            <div class="col-lg-6">
+                              <label for="doc_desc">Descripción:</label>
+                            <input type="text" id="doc_desc" class="form-control" name="doc_desc" required />
+                            </div>
+                            <div class="col-lg-6" style="min-height : 60px"></div>
+                            <div class="col-lg-6">
+                              <label for="doc_dist">Distribución del documento:</label>
+                                <select id="doc_dist" name="doc_dist" class="form-control" required>
+                                  <option value=""></option>
+                                  <option value="1">CF SANTIAGO</option>
+                                  <option value="2">TLC SANTIAGO CENTRO</option>
+                                  <option value="3">TLC QUINTA NORMAL</option>
+                                  <option value="4">TLC RENCA</option>
+                                </select>
+                                <br>
+                                <button type="button" id="addDstr" class="btn btn-info">Añadir</button>
+                            </div>
+                            <div  class="col-lg-6 " style="min-height : 80px; padding-top:0px">
+                              <table>
+                                <thead>
+                                  <th class="col-lg-6"><label>Centro</label></th>
+                                  <th class="col-lg-6"><label>Monto</label></th>
+                                </thead>
+                                <tbody id="sectorDstr">
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>                  
+                        </div>
+                        <div class="modal-footer">
+                          <div class="col-md-8">
+                            <button type="button" class="btn btn-default pull-right" data-dismiss="modal">Cancelar</button>
+                          </div>
+                          <div class="col-md-2">
+                            <button id="btnDel_new" type="button" class="btn btn-success pull-right">Guardar y nuevo
+                            </button>
+                          </div>
+                          <div class="col-md-2">
+                            <button id="btnDel" type="submit" class="btn btn-success pull-right">Guardar</button>
+                          </div>
+                        </div>
+                        </form>  
+                      </div>
+                    </div>
+                  </div>
+        <!-- Modal -->
+        <!-- Modal Proveedor -->
+        <div id="new_prov" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span>
+                          </button>
+                          <h4 class="modal-title" >Nuevo Proveedor</h4>
+                        </div>
+                        <div class="modal-body">
+                          <form id="" data-parsley-validate>
+                          <div class="col-lg-12">
+                            <div class="col-lg-6">
+                              <label for="prv_razon">Razón Social:</label>
+                            <input type="text" id="prv_razon" class="form-control" name="prv_razon" required />
+                            </div>
+                            <div class="col-lg-6">
+                              <label for="prv_rut">Rut:</label>
+                            <input type="text" id="prv_rut" class="form-control" name="prv_rut" required />
+                            </div>
+                          </div>
+                          </form>                         
+                        </div>
+                        <div class="modal-footer">
+                          <div class="col-md-10">
+                              <button type="button" class="btn btn-default pull-right" data-dismiss="modal">Cancelar</button>
+                          </div>
+                          <div class="col-md-2">
+                                <button id="btnDel" type="submit" class="btn btn-success pull-right">Guardar</button>
+                          </div>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+      <!-- Modal Proveedor -->
+      </br></br></br>
+        <!-- /page content -->
+      </div>
+    </div>
+    <!-- jQuery -->
+    <script src="{{ asset('bundles/framework/vendors/jquery/dist/jquery.min.js') }}"></script>
+    <!-- Bootstrap -->
+    <script src="{{ asset('bundles/framework/vendors/bootstrap/dist/js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('bundles/framework/vendors/bootstrap-progressbar/bootstrap-progressbar.min.js') }}"></script>      
+    <!-- Custom Theme Scripts -->
+    <script src="{{ asset('bundles/framework/build/js/custom.min.js') }}"></script>
+    <script src="{{ asset('bundles/framework/vendors/select2/dist/js/select2.full.min.js') }}"></script>
+        <!-- Datatables -->
+    <script src="{{ asset('bundles/framework/vendors/datatables.net/js/jquery.dataTables.min.js') }}"></script>            
+    <script src="{{ asset('bundles/framework/vendors/datatables.net-bs/js/dataTables.bootstrap.min.js') }}"></script>       
+    <script src="{{ asset('bundles/framework/vendors/datatables.net-buttons/js/dataTables.buttons.min.js') }}"></script>    
+    <script src="{{ asset('bundles/framework/vendors/datatables.net-buttons-bs/js/buttons.bootstrap.js') }}"></script>  
+    <script src="{{ asset('bundles/framework/vendors/datatables.net-buttons/js/buttons.html5.js') }}"></script>  
+    <script src="{{ asset('bundles/framework/vendors/jszip/dist/jszip.min.js') }}"></script>
+    <script src="{{ asset('bundles/framework/vendors/pdfmake/build/pdfmake.min.js') }}"></script>
+    <script src="{{ asset('bundles/framework/vendors/pdfmake/build/vfs_fonts.js') }}"></script>
+    <!-- bootstrap-daterangepicker -->
+    <script src="{{ asset('bundles/framework/vendors/moment/moment.min.js') }}"></script>
+    <script src="{{ asset('bundles/framework/vendors/datepicker/daterangepicker.js') }}"></script>
+    <!-- iCheck -->
+    <script src="{{ asset('bundles/framework/vendors/iCheck/icheck.min.js') }}"></script>
+    <script>
+    var addSelectedId;
+    var addSelectedName;
+    var i = 1;
+    var dstr = 0;
+    var addSelectedId = 0;
+      $(document).ready(function(){
+        $('.new_rnd').on('click',function(){
+          $('#new_doc').modal('show');
+        });
+        $( "#doc_dist" ).change(function() {
+          addSelectedName = $(this).find(":selected").text();
+          addSelectedId   = $(this).find(":selected").val();
+        });
+        $("#addDstr").on('click',function(){
+          if(addSelectedId > 0){
+            $("#sectorDstr").append('<tr><td><span class="tag tag-default">'+addSelectedName+' </span></td><td><input type="number" name="dstr_mnt['+i+']" ><input type="hidden" name="dstr['+i+']" value="'+addSelectedId+'"></td><td><a href="#" class="dellDstr"><i class="fa fa-close"></i></a></td></tr>');
+            i++;
+            dstr++;
+          }
+        });
+        $(document).on('click','.dellDstr', function(){
+          $(this).parent().parent().remove();
+          dstr--;
+          console.log(dstr);
+        });
+        $('#newProv').on('click',function(){
+          $('#new_prov').modal('show');
+        });
+        $('#btnDel_new').on('click',function(){
+          if(dstr > 0){
+            $('#new_doc').modal('hide');
+            setTimeout(function() {
+                $('#new_doc').modal('show');
+            }, 800);
+          }
+        });
+
+        $('#new_doc').on('hidden.bs.modal', function () {
+          $('#sectorDstr').html('');
+          $('#doc_dist').val('').trigger("change");
+          $('#doc_mnt').val('');
+          $('#doc_prov').val('').trigger("change");
+          $('#doc_fecha').val('');
+          $('#doc_forma').val('').trigger("change");
+          $('#doc_desc').val('');
+          $('#doc_ndoc').val('').trigger("change");
+          $('#doc_tipo').val('').trigger("change");
+        });
+        $('#doc_fecha').daterangepicker({
+          singleDatePicker: true,
+          calender_style: "picker_3",
+               "locale": {
+                "format": "MM/DD/YYYY",
+                "separator": " - ",
+                "applyLabel": "Apply",
+                "cancelLabel": "Cancel",
+                "fromLabel": "From",
+                "toLabel": "To",
+                "customRangeLabel": "Custom",
+                "daysOfWeek": [
+                    "Do",
+                    "Lu",
+                    "Ma",
+                    "Mi",
+                    "Ju",
+                    "Vi",
+                    "Sa"
+                ],
+                "monthNames": [
+                    "Enero",
+                    "Febrero",
+                    "Marzo",
+                    "Abril",
+                    "Mayo",
+                    "Junio",
+                    "Julio",
+                    "Agosto",
+                    "Septiembre",
+                    "Octubre",
+                    "Noviembre",
+                    "Diciembre"
+               ],
+               "firstDay": 1
+               }   
+          });
+        $("#formDoc").on('submit',function(){
+          if(dstr == 0){
+            alert("Seleccione al menos un centro para distribución");
+            return false;
+          }else{
+            return true;
+          }
+        });
+      });
+    </script>
+    <!-- /Datatables -->
+     <!-- footer content -->
+        <footer>
+          <div class="pull-right">
+            2017 Fundación de las Familias.
+          </div>
+          <div class="clearfix"></div>
+        </footer>
+<!-- /footer content -->
+  </body>
+</html>
